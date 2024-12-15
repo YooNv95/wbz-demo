@@ -1,0 +1,25 @@
+@import '@/styles/style.scss';
+
+.faq_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq_header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.faq_header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.faq_container {
+    margin: 0 150px;
+    min-width: 370px;
+
+    @include breakpoint(sm) { // $breakpoint-sm에 맞춤
+        margin: 0;
+    }
+}

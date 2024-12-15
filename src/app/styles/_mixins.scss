@@ -1,0 +1,22 @@
+@import 'variables';
+
+// 반응형 믹스인 정의
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (min-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: #{$breakpoint-md}){
+      @content;
+    }
+  } @else if $point == xs {
+    @media (max-width: #{$breakpoint-sm}) {
+      @content;
+    }
+  }
+}

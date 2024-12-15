@@ -1,0 +1,51 @@
+@import '@/styles/style.scss';
+
+.subtabs_container {
+    display: flex;
+    margin: 20px 0;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+/* 각 탭 스타일 */
+.subtab {
+    background: none;
+    border: none;
+    padding: 10px 10px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 활성화된 탭 (현재 선택된 탭) */
+.subtab.active {
+    background-color: var(--mint-900) !important;
+    color: white !important;
+    border-radius: 4px;
+}
+
+/* 마우스 호버 시 스타일 */
+.subtab:hover {
+    color:var(--mint-900);
+}
+
+/* 활성화된 탭에서 hover 방지 */
+.subtab.active:hover {
+    color: white;
+    background-color: var(--mint-900);
+}
+
+@include breakpoint(sm) {
+    .subtabs_container {
+        flex-wrap: wrap;
+    }
+
+    .subtab {
+        min-width: 40px;
+    }
+}
+
+
